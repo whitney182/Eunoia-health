@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eunoia Health and Wellness — Alisha Griffiths</title>
+<meta name="description" content="Active Release Technique and therapeutic massage with Alisha Griffiths. Restoring movement, relieving pain, and supporting your body's natural ability to heal.">
+<meta property="og:title" content="Eunoia Health and Wellness — Alisha Griffiths">
+<meta property="og:description" content="Active Release Technique and therapeutic massage. Restoring movement, relieving pain, and supporting your body's natural ability to heal.">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://assets-jane-cac1-12.janeapp.net/pub/W1siZiIsImRyYWdvbmZseS80NjU1MS9pbWFnZS9waG90by8yMDI0LTEyLTA1LzIwNDUzMi9mNTA2MmNiOS03NGZkLTRkZGMtYWQ0MS05ZGYxYTM3Y2IzMTEvTG9nbyBhbGlzaGEgLSBmcm9tIFBhbS5qcGciXSxbInAiLCJ0aHVtYiIsIjYwMHg2MDA-Il1d?sha=e7b1c59e3d306616&for=eunoiahealthandwellness.janeapp.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --bg:#FAFAF8;
+  --cream:#F4EDE1;
+  --sage:#8BB5A0;
+  --sage-deep:#5E8F78;
+  --sage-pale:#EBF3EE;
+  --sage-mid:#C5DDD5;
+  --gold:#C4A44E;
+  --gold-pale:#F7EDCF;
+  --charcoal:#2A2A28;
+  --body:#4A5550;
+  --muted:#8A9E96;
+  --rule:#D5E6DD;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--charcoal);-webkit-font-smoothing:antialiased;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+figure,blockquote{margin:0;padding:0}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+.sec{padding:clamp(80px,10vw,130px) 0}
+
+/* ── TYPE ── */
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-deep)}
+h1,h2,h3{font-family:var(--sans);font-weight:300;line-height:1.12}
+h1{font-size:clamp(46px,6vw,78px)}
+h2{font-size:clamp(34px,4vw,54px)}
+h3{font-size:clamp(20px,2vw,26px)}
+em{font-style:normal;color:var(--sage-deep)}
+p{line-height:1.72}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border-radius:60px;transition:all .35s var(--ease);white-space:nowrap}
+.btn-sage{background:var(--sage);color:#fff;border:1.5px solid var(--sage)}
+.btn-sage:hover{background:var(--sage-deep);border-color:var(--sage-deep)}
+.btn-outline{background:transparent;color:var(--charcoal);border:1.5px solid var(--rule)}
+.btn-outline:hover{border-color:var(--sage);color:var(--sage-deep)}
+
+/* ── REVEAL ANIMATION ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:background .4s,box-shadow .4s,padding .4s}
+nav.scrolled{background:rgba(250,250,248,.96);box-shadow:0 1px 0 var(--rule);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:12px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo img{height:56px;width:auto;transition:height .4s}
+nav.scrolled .nav-logo img{height:44px}
+.nav-book{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;background:var(--sage);color:#fff;border-radius:60px;border:1.5px solid var(--sage);transition:all .3s}
+.nav-book:hover{background:var(--sage-deep);border-color:var(--sage-deep)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;padding-bottom:80px;background:linear-gradient(150deg,var(--sage-pale) 0%,var(--bg) 45%,var(--cream) 100%);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-160px;right:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(196,164,78,.1) 0%,transparent 68%);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.hero-tag{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero-tag-line{width:32px;height:1px;background:var(--sage);display:block;flex-shrink:0}
+.hero-lede{font-size:clamp(15px,1.4vw,18px);color:var(--body);margin:22px 0 36px;max-width:46ch}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{position:relative;display:flex;justify-content:center}
+.hero-blob{width:100%;max-width:420px;aspect-ratio:4/5;background:linear-gradient(145deg,var(--sage-pale) 0%,var(--sage-mid) 50%,rgba(196,164,78,.12) 100%);border-radius:60% 40% 55% 45% / 50% 45% 55% 50%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-blob-placeholder{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--muted);text-align:center;padding:40px;line-height:1.6}
+
+/* ── INTRO BAR ── */
+.intro-bar{background:var(--sage);padding:clamp(28px,4vw,44px) 0}
+.intro-bar-inner{display:flex;align-items:center;justify-content:center;gap:clamp(32px,5vw,72px);flex-wrap:wrap}
+.intro-stat{text-align:center}
+.intro-stat .num{font-family:var(--sans);font-size:clamp(30px,3vw,44px);color:#fff;font-weight:300;display:block;line-height:1}
+.intro-stat .lbl{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-top:6px;display:block}
+.intro-div{width:1px;height:44px;background:rgba(255,255,255,.25);flex-shrink:0}
+
+/* ── SERVICES ── */
+.sec-hd{margin-bottom:clamp(40px,5vw,64px)}
+.sec-hd .eyebrow{display:block;margin-bottom:14px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:#fff;border:1px solid var(--rule);padding:clamp(28px,3vw,42px);border-radius:6px;transition:box-shadow .4s,transform .4s}
+.svc-card:hover{box-shadow:0 16px 48px rgba(139,181,160,.18);transform:translateY(-5px)}
+.svc-icon{width:46px;height:46px;background:var(--sage-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;flex-shrink:0}
+.svc-icon svg{width:20px;height:20px;stroke:var(--sage-deep);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-card h3{margin-bottom:14px;line-height:1.2}
+.svc-card p{font-size:15px;color:var(--body)}
+
+/* ── ACTIVE RELEASE ── */
+.art-sec{background:var(--cream)}
+.art-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,7vw,96px);align-items:center}
+.art-content .eyebrow{display:block;margin-bottom:16px}
+.art-content h2{margin-bottom:24px}
+.art-content p{font-size:16px;color:var(--body);margin-bottom:16px}
+.art-points{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.art-points li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--body)}
+.art-dot{width:7px;height:7px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:8px}
+.art-visual{background:linear-gradient(145deg,var(--sage-pale) 0%,var(--cream) 100%);border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;border:1px solid var(--rule);overflow:hidden}
+.art-visual-placeholder{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--muted);text-align:center;padding:40px;line-height:1.6}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:clamp(40px,5vw,64px)}
+.testi-card{background:#fff;border:1px solid var(--rule);padding:clamp(24px,2.5vw,36px);border-radius:6px;display:flex;flex-direction:column;gap:20px}
+.testi-mark{font-family:var(--serif);font-size:52px;color:var(--sage-mid);line-height:.7;flex-shrink:0}
+.testi-card blockquote p{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.5vw,19px);color:var(--charcoal);line-height:1.55}
+.testi-name{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-top:16px;border-top:1px solid var(--rule);margin-top:auto}
+
+/* ── BOOK CTA ── */
+.book-sec{background:linear-gradient(140deg,var(--sage-pale) 0%,var(--cream) 100%);text-align:center}
+.book-sec .eyebrow{display:block;margin-bottom:18px}
+.book-sec h2{margin-bottom:20px}
+.book-sec .lede{font-size:clamp(15px,1.4vw,18px);color:var(--body);max-width:44ch;margin:0 auto 38px;line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal);padding:clamp(48px,6vw,72px) 0 clamp(24px,3vw,36px)}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(32px,5vw,64px);padding-bottom:clamp(32px,4vw,48px);border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:clamp(20px,3vw,32px)}
+.foot-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:14px}
+.foot-col p,.foot-col a{font-size:13px;color:rgba(255,255,255,.55);line-height:1.75;display:block;transition:color .3s}
+.foot-col a:hover{color:#fff}
+.foot-map-link{color:var(--sage) !important;font-size:12px;letter-spacing:.08em;margin-top:6px}
+.foot-map-link:hover{color:#fff !important}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.35)}
+.foot-links{display:flex;gap:20px}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.4);transition:color .3s}
+.foot-links a:hover{color:#fff}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;text-align:center}.foot-links{justify-content:center}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-inner,.art-inner{grid-template-columns:1fr}
+  .hero-img{display:none}
+  .services-grid,.testi-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .services-grid,.testi-grid{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .btn{width:100%}
+  .intro-bar-inner{flex-direction:column;gap:24px}
+  .intro-div{display:none}
+  .foot-inner{flex-direction:column;text-align:center}
+  .foot-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Eunoia Health and Wellness home">
+        <img src="https://assets-jane-cac1-12.janeapp.net/pub/W1siZiIsImRyYWdvbmZseS80NjU1MS9pbWFnZS9waG90by8yMDI0LTEyLTA1LzIwNDUzMi9mNTA2MmNiOS03NGZkLTRkZGMtYWQ0MS05ZGYxYTM3Y2IzMTEvTG9nbyBhbGlzaGEgLSBmcm9tIFBhbS5qcGciXSxbInAiLCJ0aHVtYiIsIjYwMHg2MDA-Il1d?sha=e7b1c59e3d306616&for=eunoiahealthandwellness.janeapp.com" alt="Eunoia Health and Wellness">
+      </a>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="/" style="font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);transition:color .3s">Home</a>
+        <a href="/services/" style="font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);transition:color .3s">Services</a>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="nav-book">Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" aria-label="Hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag reveal">
+          <span class="hero-tag-line" aria-hidden="true"></span>
+          <span class="eyebrow">Eunoia Health and Wellness</span>
+        </div>
+        <h1 class="reveal">Move better.<br>Feel better.<br><em>Live better.</em></h1>
+        <p class="hero-lede reveal">At Eunoia, we offer Active Release Technique (also known as Adhesion Release Method, or ARM), therapeutic massage, acupuncture, cupping and more — restoring movement, relieving pain, and supporting your body's natural ability to heal itself.</p>
+        <div class="hero-ctas reveal">
+          <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage">Book an Appointment</a>
+          <a href="#services" class="btn btn-outline">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-img reveal">
+        <div class="hero-blob">
+          <img src="4e1286da-183f-4c11-821f-4de01aaff044.png" alt="Active Release Technique treatment" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO BAR -->
+<div class="intro-bar" aria-label="At a glance">
+  <div class="wrap">
+    <div class="intro-bar-inner">
+      <div class="intro-stat">
+        <span class="num">ART</span>
+        <span class="lbl">Certified Practitioners</span>
+      </div>
+      <div class="intro-div" aria-hidden="true"></div>
+      <div class="intro-stat">
+        <span class="num">RMT</span>
+        <span class="lbl">Registered Massage Therapists</span>
+      </div>
+      <div class="intro-div" aria-hidden="true"></div>
+      <div class="intro-stat">
+        <span class="num">Coldbrook</span>
+        <span class="lbl">Nova Scotia, Canada</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="sec" aria-labelledby="svc-hd">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2 id="svc-hd">Services designed<br>to <em>restore you.</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 8V4a2 2 0 0 0-4 0v4"/><path d="M10 7.5V4a2 2 0 0 0-4 0v8.5"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/><path d="M6 4v5"/></svg>
+        </div>
+        <h3>Active Release Technique (ARM)</h3>
+        <p>Also known as Adhesion Release Method (ARM), this highly successful soft-tissue therapy restores optimal texture, motion, and function of the body's soft tissue and releases any entrapped nerves or blood vessels — relieving pain from low back pain to neck, hip, foot, and everywhere in between.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Therapeutic Massage</h3>
+        <p>Hands-on massage tailored to your body's needs — reducing tension, improving circulation, and promoting deep relaxation and lasting recovery.</p>
+        <p style="margin-top:12px;font-size:14px;color:var(--sage-deep);font-weight:500">Also offered: lymphatic drainage massage, gua sha and fire cupping.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Personalized Treatment</h3>
+        <p>Every body is different. We work with you to understand your history and goals, creating a treatment plan that evolves with your progress.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="/services/" class="btn btn-outline">See All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS ACTIVE RELEASE -->
+<section id="active-release" class="sec art-sec" aria-labelledby="art-hd">
+  <div class="wrap">
+    <div class="art-inner">
+      <div class="art-content reveal">
+        <span class="eyebrow">Understanding the Treatment</span>
+        <h2 id="art-hd">What is Active<br><em>Release Technique?</em></h2>
+        <p>ART® (Active Release Techniques, also known as Adhesion Release Method or ARM) is a state-of-the-art, highly successful soft-tissue assessment and therapy that is quickly gaining popularity for the successful treatment of myofascial (muscle &amp; fascia), tendon, ligament, and nerve problems.</p>
+        <p>The goal of ARM is to restore optimal texture, motion, and function of the body's soft tissue and release any entrapped nerves or blood vessels. It can be used to relieve pain in a wide variety of patients — from low back pain to neck pain to hip pain to foot pain and everywhere in between.</p>
+        <p>Alisha begins by positioning the affected muscle, tendon, or nerve and applies precise, targeted tension with her hands as you actively move through a stretch. As the tissue lengthens, she evaluates its texture and quality — identifying areas of healthy tissue versus scar tissue that require further work. When adhesions are found, the tension and direction are adjusted in real time to address the problem directly.</p>
+        <p>This means every ART® session is both an assessment and a treatment — allowing Alisha to continuously monitor tissue health and track your progress from visit to visit.</p>
+        <p>Alisha is certified and currently provides Active Release Therapy in Coldbrook, Nova Scotia and serves all of Nova Scotia — bringing this highly effective treatment to clients across the province.</p>
+        <ul class="art-points">
+          <li><span class="art-dot" aria-hidden="true"></span>Sports injuries</li>
+          <li><span class="art-dot" aria-hidden="true"></span>Chronic back pain</li>
+          <li><span class="art-dot" aria-hidden="true"></span>Hip and deep core pain</li>
+          <li><span class="art-dot" aria-hidden="true"></span>Knee pain &amp; sciatica</li>
+          <li><span class="art-dot" aria-hidden="true"></span>And many more common conditions</li>
+        </ul>
+        <p style="margin-top:24px;font-size:13px;color:var(--muted);border-left:3px solid var(--sage-mid);padding-left:14px;line-height:1.65"><strong style="color:var(--body)">Please note:</strong> Unlike therapeutic massage or acupuncture, ART/ARM is not a relaxing appointment. Working with entrapped nerves will create some discomfort and pain for a short period of time.</p>
+      </div>
+      <div class="art-visual reveal">
+        <img src="1ec25ce6-d6e8-42b2-a8a1-9a7626ea3372.png" alt="Active Release Technique hip treatment" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="sec" aria-labelledby="testi-hd">
+  <div class="wrap">
+    <div class="sec-hd reveal">
+      <span class="eyebrow">Client Stories</span>
+      <h2 id="testi-hd">Heard from<br><em>our clients.</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <blockquote><p>After months of shoulder pain that physio couldn't fix, Alisha found the problem in two sessions. I had full range of motion back within a month.</p></blockquote>
+        <span class="testi-name">— Sarah M.</span>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <blockquote><p>I've had regular massage for years, but what Alisha does is completely different. She actually finds the problem and fixes it.</p></blockquote>
+        <span class="testi-name">— James T.</span>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-mark" aria-hidden="true">"</div>
+        <blockquote><p>My chronic lower back pain is finally manageable after years of struggle. The combination of ART and massage has been life-changing.</p></blockquote>
+        <span class="testi-name">— Rachel L.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK CTA -->
+<section class="sec book-sec" aria-labelledby="book-hd">
+  <div class="wrap">
+    <span class="eyebrow reveal">Ready to Begin?</span>
+    <h2 id="book-hd" class="reveal">Your first step<br>toward <em>feeling better.</em></h2>
+    <p class="lede reveal">Book your appointment through our easy online system or call our office at <a href="tel:+17822325408" style="color:var(--sage-deep);text-decoration:underline">782-232-5408</a> to find a time and date that works best for you.</p>
+    <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage reveal">Book Your Appointment</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Eunoia Rehab and Restore</h4>
+        <p>7165 Unit 106B<br>Highway #1, Coldbrook</p>
+        <a href="https://maps.google.com/?q=7165+Highway+1+Coldbrook+NS" target="_blank" rel="noopener noreferrer" class="foot-map-link">Directions &amp; Map &rarr;</a>
+      </div>
+      <div class="foot-col">
+        <h4>Eunoia Health and Wellness</h4>
+        <p>7165 Unit 201A<br>Highway #1, Coldbrook</p>
+        <a href="https://maps.google.com/?q=7165+Highway+1+Coldbrook+NS" target="_blank" rel="noopener noreferrer" class="foot-map-link">Directions &amp; Map &rarr;</a>
+      </div>
+      <div class="foot-col">
+        <h4>Need Help?</h4>
+        <a href="tel:+17822325408">782-232-5408</a>
+        <a href="mailto:eunoiahealthandwellness@gmail.com">eunoiahealthandwellness@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">&copy; 2026 Eunoia Health and Wellness</span>
+      <div class="foot-links">
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer">Book Online</a>
+        <a href="/services/">Services</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Nav scroll */
+  const nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Reveal on scroll */
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  reveals.forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>

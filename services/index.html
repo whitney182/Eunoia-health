@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Eunoia Health and Wellness</title>
+<meta name="description" content="Full list of services offered at Eunoia Health and Wellness — ART, therapeutic massage, acupuncture, fire cupping, GuaSha, lymphatic drainage, and counselling.">
+<link rel="icon" href="https://assets-jane-cac1-12.janeapp.net/pub/W1siZiIsImRyYWdvbmZseS80NjU1MS9pbWFnZS9waG90by8yMDI0LTEyLTA1LzIwNDUzMi9mNTA2MmNiOS03NGZkLTRkZGMtYWQ0MS05ZGYxYTM3Y2IzMTEvTG9nbyBhbGlzaGEgLSBmcm9tIFBhbS5qcGciXSxbInAiLCJ0aHVtYiIsIjYwMHg2MDA-Il1d?sha=e7b1c59e3d306616&for=eunoiahealthandwellness.janeapp.com"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --bg:#FAFAF8;
+  --cream:#F4EDE1;
+  --sage:#8BB5A0;
+  --sage-deep:#5E8F78;
+  --sage-pale:#EBF3EE;
+  --sage-mid:#C5DDD5;
+  --gold:#C4A44E;
+  --charcoal:#2A2A28;
+  --body:#4A5550;
+  --muted:#8A9E96;
+  --rule:#D5E6DD;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--charcoal);-webkit-font-smoothing:antialiased;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-deep)}
+h1,h2,h3{font-family:var(--sans);font-weight:300;line-height:1.12}
+h1{font-size:clamp(40px,5vw,64px)}
+h2{font-size:clamp(26px,3vw,36px)}
+h3{font-size:clamp(18px,2vw,22px);font-weight:500}
+p{line-height:1.72}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border-radius:60px;transition:all .35s var(--ease);white-space:nowrap}
+.btn-sage{background:var(--sage);color:#fff;border:1.5px solid var(--sage)}
+.btn-sage:hover{background:var(--sage-deep);border-color:var(--sage-deep)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(250,250,248,.96);box-shadow:0 1px 0 var(--rule);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo img{height:44px;width:auto}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;letter-spacing:.06em;color:var(--body);transition:color .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--sage-deep)}
+.nav-book{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;background:var(--sage);color:#fff;border-radius:60px;transition:all .3s}
+.nav-book:hover{background:var(--sage-deep)}
+
+/* ── PAGE HEADER ── */
+.page-hd{padding:clamp(120px,14vw,160px) 0 clamp(48px,6vw,80px);background:linear-gradient(150deg,var(--sage-pale) 0%,var(--bg) 60%)}
+.page-hd .eyebrow{display:block;margin-bottom:14px}
+.page-hd h1{margin-bottom:18px}
+.page-hd .lede{font-size:clamp(15px,1.4vw,18px);color:var(--body);max-width:54ch}
+
+/* ── SERVICES LIST ── */
+.services-list{padding:clamp(48px,7vw,96px) 0}
+.svc-item{display:grid;grid-template-columns:1fr 2fr;gap:clamp(32px,5vw,80px);padding:clamp(40px,5vw,64px) 0;border-top:1px solid var(--rule);align-items:start}
+.svc-item:last-child{border-bottom:1px solid var(--rule)}
+.svc-label{position:sticky;top:100px}
+.svc-icon{width:48px;height:48px;background:var(--sage-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc-icon svg{width:22px;height:22px;stroke:var(--sage-deep);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-label h2{margin-bottom:0}
+.svc-label .svc-tag{display:inline-block;margin-top:14px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--sage);color:var(--sage-deep);border-radius:60px}
+.svc-body p{font-size:16px;color:var(--body);margin-bottom:16px}
+.svc-body p:last-child{margin-bottom:0}
+.svc-points{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.svc-points li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--body)}
+.svc-dot{width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0;margin-top:9px}
+
+/* ── BOOK CTA ── */
+.book-sec{background:linear-gradient(140deg,var(--sage-pale) 0%,var(--cream) 100%);padding:clamp(80px,10vw,120px) 0;text-align:center}
+.book-sec .eyebrow{display:block;margin-bottom:18px}
+.book-sec h2{font-size:clamp(32px,4vw,50px);margin-bottom:20px}
+.book-sec .lede{font-size:clamp(15px,1.4vw,18px);color:var(--body);max-width:44ch;margin:0 auto 38px;line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal);padding:clamp(48px,6vw,72px) 0 clamp(24px,3vw,36px)}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(32px,5vw,64px);padding-bottom:clamp(32px,4vw,48px);border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:clamp(20px,3vw,32px)}
+.foot-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:14px}
+.foot-col p,.foot-col a{font-size:13px;color:rgba(255,255,255,.55);line-height:1.75;display:block;transition:color .3s}
+.foot-col a:hover{color:#fff}
+.foot-map-link{color:var(--sage) !important;font-size:12px;letter-spacing:.08em;margin-top:6px}
+.foot-map-link:hover{color:#fff !important}
+.foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-copy{font-size:12px;color:rgba(255,255,255,.35)}
+.foot-links{display:flex;gap:20px}
+.foot-links a{font-size:12px;color:rgba(255,255,255,.4);transition:color .3s}
+.foot-links a:hover{color:#fff}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;text-align:center}.foot-links{justify-content:center}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .svc-item{grid-template-columns:1fr}
+  .svc-label{position:static}
+  .nav-links{display:none}
+}
+@media(max-width:480px){
+  .foot-inner{flex-direction:column;text-align:center}
+  .foot-links{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Eunoia Health and Wellness home">
+        <img src="https://assets-jane-cac1-12.janeapp.net/pub/W1siZiIsImRyYWdvbmZseS80NjU1MS9pbWFnZS9waG90by8yMDI0LTEyLTA1LzIwNDUzMi9mNTA2MmNiOS03NGZkLTRkZGMtYWQ0MS05ZGYxYTM3Y2IzMTEvTG9nbyBhbGlzaGEgLSBmcm9tIFBhbS5qcGciXSxbInAiLCJ0aHVtYiIsIjYwMHg2MDA-Il1d?sha=e7b1c59e3d306616&for=eunoiahealthandwellness.janeapp.com" alt="Eunoia Health and Wellness">
+      </a>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="/" style="font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--body);transition:color .3s">Home</a>
+        <a href="/services/" style="font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);transition:color .3s">Services</a>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="nav-book">Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hd">
+  <div class="wrap">
+    <span class="eyebrow reveal">What We Offer</span>
+    <h1 class="reveal">Our Services</h1>
+    <p class="lede reveal">From soft tissue therapy to acupuncture and counselling — every service at Eunoia is designed to support your whole-body health and wellbeing.</p>
+  </div>
+</div>
+
+<!-- SERVICES LIST -->
+<div class="services-list">
+  <div class="wrap">
+
+    <!-- ART -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
+        <h2>Active Release Technique</h2>
+        <span class="svc-tag">ART® Certified</span>
+      </div>
+      <div class="svc-body">
+        <p>ART® (Active Release Techniques, also known as Adhesion Release Method or ARM) is a state-of-the-art, highly successful soft-tissue assessment and therapy that is quickly gaining popularity for the successful treatment of myofascial (muscle &amp; fascia), tendon, ligament, and nerve problems.</p>
+        <p>The goal of ARM is to restore optimal texture, motion, and function of the body's soft tissue and release any entrapped nerves or blood vessels. It can be used to relieve pain in a wide variety of patients — from low back pain to neck pain to hip pain to foot pain and everywhere in between.</p>
+        <p>A certified practitioner begins by positioning the affected muscle, tendon, or nerve and applies precise, targeted tension with their hands as you actively move through a stretch. As the tissue lengthens, they evaluate its texture and quality — identifying areas of healthy tissue versus scar tissue that require further work. When adhesions are found, the tension and direction are adjusted in real time to address the problem directly.</p>
+        <p>This means every ART® session is both an assessment and a treatment — allowing a certified practitioner to continuously monitor tissue health and track your progress from visit to visit.</p>
+        <ul class="svc-points">
+          <li><span class="svc-dot" aria-hidden="true"></span>Sports injuries</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Chronic back pain</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Hip and deep core pain</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Knee pain &amp; sciatica</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>And many more common conditions</li>
+        </ul>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--MASSAGE -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 8V4a2 2 0 0 0-4 0v4"/><path d="M10 7.5V4a2 2 0 0 0-4 0v8.5"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/><path d="M6 4v5"/></svg></div>
+        <h2>Therapeutic Massage</h2>
+        <span class="svc-tag">RMT</span>
+      </div>
+      <div class="svc-body">
+        <p>Therapeutic massage is a hands-on treatment tailored to your body's specific needs. Whether you're managing chronic pain, recovering from an injury, or simply looking to reduce tension and restore balance, a certified practitioner works with you to develop an approach that delivers real, lasting results.</p>
+        <p>Each session focuses on improving circulation, releasing muscle tension, and promoting the deep relaxation your body needs to heal and recover effectively.</p>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--ACUPUNCTURE -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="4" r="2" fill="var(--sage-deep)" stroke="none"/><line x1="12" y1="6" x2="12" y2="20"/><polygon points="11,20 13,20 12,23" fill="var(--sage-deep)" stroke="none"/></svg></div>
+        <h2>Acupuncture</h2>
+      </div>
+      <div class="svc-body">
+        <p>Acupuncture is a time-tested practice rooted in traditional medicine that involves the gentle insertion of fine needles at specific points on the body. It works to restore the natural flow of energy, reduce inflammation, and support the body's innate ability to heal itself.</p>
+        <p>A certified practitioner integrates acupuncture as part of a comprehensive treatment plan to address pain, stress, hormonal imbalances, digestive issues, and overall wellbeing.</p>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--FIRE CUPPING -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2c0 6-6 6-6 12a6 6 0 0 0 12 0c0-6-6-6-6-12z"/><path d="M12 12c0 3-2 4-2 6a2 2 0 0 0 4 0c0-2-2-3-2-6z"/></svg></div>
+        <h2>Fire Cupping</h2>
+      </div>
+      <div class="svc-body">
+        <p>Fire cupping is an ancient therapy that uses heated glass cups to create suction on the skin. This negative pressure draws blood to the surface, loosens tight fascia, and encourages circulation deep within the muscle tissue.</p>
+        <p>It is particularly effective for relieving muscle tension, reducing pain, and supporting recovery from both acute and chronic conditions. Many clients find it a deeply relaxing complement to other treatments.</p>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--GUASHA -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 3h18v4H3z"/><path d="M5 7v14"/><path d="M9 7v14"/><path d="M13 7v14"/><path d="M19 7v14"/></svg></div>
+        <h2>Gua Sha</h2>
+      </div>
+      <div class="svc-body">
+        <p>Gua Sha is a traditional East Asian technique that involves using a smooth-edged tool to apply short strokes across the skin. This stimulates microcirculation of the soft tissues, breaks up fascia restrictions, and promotes healing at a cellular level.</p>
+        <p>It is commonly used to treat chronic pain, muscle stiffness, and inflammation, and can provide immediate relief for areas that are difficult to access through conventional massage alone.</p>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--LYMPHATIC DRAINAGE -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C6 8 3 13 3 16a9 9 0 0 0 18 0c0-3-3-8-9-14z"/></svg></div>
+        <h2>Lymphatic Drainage Massage</h2>
+      </div>
+      <div class="svc-body">
+        <p>Lymphatic drainage massage is a gentle massage technique that promotes the flow of lymph fluid, which is crucial for waste removal and immune function. It involves light, rhythmic movements and pressure to stimulate the lymphatic system and help clear blockages.</p>
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage" style="margin-top:28px">Book an Appointment</a>
+      </div>
+    </div>
+
+    <!--COUNSELLING -->
+    <div class="svc-item reveal">
+      <div class="svc-label">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h2>Counselling</h2>
+        <span class="svc-tag">RCT-C &middot; CCC</span>
+      </div>
+      <div class="svc-body">
+        <p style="font-weight:500;color:var(--charcoal);margin-bottom:4px">Jennica Haines <span style="font-weight:400;color:var(--muted);font-size:14px">(She/Her)</span></p>
+        <p style="font-size:13px;color:var(--muted);letter-spacing:.06em;margin-bottom:20px">M.Ed, RCT-C, CCC &mdash; Registered Counselling Therapist (Candidate), Nova Scotia College of Counselling Therapists &middot; Canadian Certified Counsellor</p>
+        <p>Jennica is a born-and-raised Annapolis Valley counsellor with a Master's Degree in Counselling (2015) and a background in Psychology and Sociology. She works with adults and teens navigating anxiety, stress, grief, self-esteem, relationship challenges, and life transitions — with a special interest in supporting late-diagnosed ADHD individuals, particularly women seeking to understand their diagnosis.</p>
+        <p>Her approach is collaborative and trauma-informed, drawing from strength-based, person-centred, mindfulness-based, and experiential therapies. She believes meaningful growth happens when we feel safe enough to explore our experiences with curiosity and compassion — and views therapy as an individualized, empowering process that builds resilience and fosters self-understanding.</p>
+        <p>Jennica is also completing specialized training in Equine-Assisted Therapy (EAT) — an experiential approach that incorporates horses to support emotional awareness, communication skills, and confidence. This unique form of therapy offers a powerful opportunity for healing outside the traditional office setting, and is expected to be available in the coming months.</p>
+        <ul class="svc-points">
+          <li><span class="svc-dot" aria-hidden="true"></span>Anxiety, stress &amp; grief</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Self-esteem &amp; relationship challenges</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Late-diagnosed ADHD (adults &amp; teens)</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Life transitions &amp; personal growth</li>
+          <li><span class="svc-dot" aria-hidden="true"></span>Equine-Assisted Therapy (coming soon)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BOOK CTA -->
+<section class="book-sec">
+  <div class="wrap">
+    <span class="eyebrow reveal">Ready to Begin?</span>
+    <h2 class="reveal">Book your appointment today.</h2>
+    <p class="lede reveal">Choose the service and time that works best for you — easy online booking through Jane App.</p>
+    <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sage reveal">Book Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <h4>Eunoia Rehab and Restore</h4>
+        <p>7165 Unit 106B<br>Highway #1, Coldbrook</p>
+        <a href="https://maps.google.com/?q=7165+Highway+1+Coldbrook+NS" target="_blank" rel="noopener noreferrer" class="foot-map-link">Directions &amp; Map &rarr;</a>
+      </div>
+      <div class="foot-col">
+        <h4>Eunoia Health and Wellness</h4>
+        <p>7165 Unit 201A<br>Highway #1, Coldbrook</p>
+        <a href="https://maps.google.com/?q=7165+Highway+1+Coldbrook+NS" target="_blank" rel="noopener noreferrer" class="foot-map-link">Directions &amp; Map &rarr;</a>
+      </div>
+      <div class="foot-col">
+        <h4>Need Help?</h4>
+        <a href="tel:+17822325408">782-232-5408</a>
+        <a href="mailto:eunoiahealthandwellness@gmail.com">eunoiahealthandwellness@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">&copy; 2026 Eunoia Health and Wellness</span>
+      <div class="foot-links">
+        <a href="https://eunoiahealthandwellness.janeapp.com" target="_blank" rel="noopener noreferrer">Book Online</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  },{threshold:0.1});
+  reveals.forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>
